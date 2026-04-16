@@ -16,6 +16,10 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 
+
+app.get('/', (req,res)=> {
+    res.send('LedgerBase is up and running')
+})
 // API route registration
 app.use('/api/auth', authRoutes);
 app.use('/api/accounts', accountRouter);
